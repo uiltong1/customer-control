@@ -25,7 +25,7 @@ class Cliente
     public function getTelefone(){
         return $this->telefone;
     }
-    public function setIdCod($cod){
+    public function setCod($cod){
         $this->cod = $cod;
         return $this;
     }

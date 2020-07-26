@@ -4,6 +4,7 @@ namespace App\Dao;
 
 use App\Model\Cliente;
 use App\Model\Connection;
+use App\Model\Log;
 use Exception;
 
 class ClienteDao
@@ -42,6 +43,21 @@ class ClienteDao
         }
         return $result;
     }
+    public function consultCustomer($cod)
+    {
+        try {
+            $sql = "SELECT *FROM CLIENTE WHERE cod = $cod";
+            $cmd = Connection::getConexao()->prepare($sql);
+            $cmd->execute();
+            
+            $result = $cmd->fetchObject('App\Model\Cliente');
+
+        } catch (Exception $e) {
+            $result = ["message" => "Erro ao conectar-se ao servidor banco de dados.", "error" => "$e"];
+        }
+        return $result;
+
+    }
     public function update(Cliente $cliente)
     {
         try {
@@ -59,6 +75,8 @@ class ClienteDao
 
         } catch (Exception $e) {
             $result = ["message" => "Erro ao conectar-se ao servidor banco de dados.", "error" => "$e"];
+            $log = new Log;
+            $log->debugLog($result);
         }
         return $result;
     }
@@ -73,7 +91,10 @@ class ClienteDao
             $result = ["message" => "Cliente excluído(a) com sucesso!"];
         } catch (Exception $e) {
             $result = ["message" => "Erro ao conectar-se ao servidor de banco de dados.", "error" => "$e"];
+            $log = new Log;
+            $log->debugLog($result);
         }
+        return $result;
     }
 
 }
