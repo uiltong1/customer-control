@@ -23,11 +23,11 @@ require('../controller/ClienteController.php'); ?>
             <label for="nome">Nome:</label>
             <input type="text" name="nome" value="<?php echo $customer->getNome();?>" placeholder="Informe o nome completo" />
             <label for="cpf">CPF:</label>
-            <input type="text" name="cpf" value="<?php echo $customer->getCpf();?>" placeholder="000.000.000-00" />
+            <input type="text" name="cpf" oninput="maskCpf(this)" value="<?php echo $customer->getCpf();?>" placeholder="000.000.000-00" />
             <label for="email">E-mail</label>
             <input type="email" name="email" value="<?php echo $customer->getEmail();?>" placeholder="exemplo@exemplo.com" />
             <label for="telefone">Telefone</label>
-            <input type="phone" name="telefone" value="<?php echo $customer->getTelefone();?>" placeholder="(XX)XXXX-XXXX" />
+            <input type="phone" name="telefone" oninput="maskTelefone(this)" value="<?php echo $customer->getTelefone();?>" placeholder="(XX)XXXX-XXXX" />
                 <button class="cancelar">Salvar</button>
                 <a href="../../index.php">Cancelar</a>
         </form>

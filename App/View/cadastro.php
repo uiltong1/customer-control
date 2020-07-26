@@ -20,11 +20,11 @@ require('../controller/ClienteController.php'); ?>
             <?php $message; ?>
             <input type="text" value="" name="nome" placeholder="Informe o nome completo"/>
             <!-- <label for="nome">CPF:</label> -->
-            <input type="text" name="cpf" placeholder="000.000.000-00"/>
+            <input type="text" oninput="maskCpf(this)" name="cpf" placeholder="000.000.000-00"/>
             <!-- <label for="email">E-mail</label> -->
             <input type="email" name="email" placeholder="exemplo@exemplo.com" />
             <!-- <label for="telefone">Telefone</label> -->
-            <input type="phone" name="telefone" placeholder="(XX)XXXX-XXXX" />
+            <input type="phone" oninput="maskTelefone(this)" name="telefone" placeholder="(XX)XXXX-XXXX" />
             <button type="submit" >Salvar</button>
             <a href="../../index.php">Cancelar</a>
         </form>
