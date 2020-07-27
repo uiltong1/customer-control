@@ -13,9 +13,12 @@ ou
 ```shell
 wget https://github.com/uiltong1/customer-control/archive/master.zip
 ```
-
+# Dependecias utilizadas
+ - Monolog: Biblioteca muito conhecida utilizada para geração de logs.
+  [Documentação](https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md)
+ 
+ 
 # Instalando Dependências 
-
 ```shel
 composer install 
 ```
