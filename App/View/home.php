@@ -16,6 +16,7 @@
         <div><a href="app/view/cadastro.php">Novo</a></div>
     </div>
     <div class="painel">
+    <?php if(count($cliente->list()) > 0):?>
         <table class="table-customer">
             <thead>
                 <tr>
@@ -38,6 +39,9 @@
                 <?php };?>
             </tbody>
         </table>
+        <?php else :?>
+        <span>Nenhum Registro encontrado.</span>
+        <?php endif;?>
     </div>
 </body>
 </html>

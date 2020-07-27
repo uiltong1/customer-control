@@ -27,6 +27,7 @@ function updateCustomer($cliente){
   $customer->setNome($_POST['nome']);
   $customer->setEmail($_POST['email']);
   $customer->setTelefone(($_POST['telefone']));
+  $cliente->update($customer);
   $log->systemLog($customer, 'Dados do Cliente foi alterado');
   echo" <script>alert('Dados atualizados com sucesso!')
                 history.go(-1);</script>";

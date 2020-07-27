@@ -67,7 +67,6 @@ a:hover{
 .table-customer{
     width: 100%;
     max-width: 1280px;
-    
     margin: 20px;
     border: 1px solid #272727;
     margin: 20px;
@@ -99,8 +98,8 @@ a:hover{
     align-items: center;
 }
 .cadastro form{
-    width: 100%;
-    max-width: 680px;
+    width: 75%;
+    max-width: 700px;
     margin: 30px auto 0;
     padding: 30px;
     display: flex;
@@ -168,5 +167,10 @@ button{
         flex-direction: column;
         border: 1px solid #4F3AB7;
     } 
+  }
+  @media screen and (max-width: 600px) {
+    .table-customer{
+        width: 100%;
+    }
   }
   

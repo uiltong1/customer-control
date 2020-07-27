@@ -36,7 +36,7 @@ class ClienteDao
             if ($cmd->rowCount() > 0):
                 $result = $cmd->fetchAll(\PDO::FETCH_OBJ);
             else:
-                $result = ["message" => "Nenhum Registro Encontrado."];
+                $result = [];
             endif;
         } catch (Exception $e) {
             $result = ["message" => "Erro ao conectar-se ao servidor de banco de dados.", "error" => "$e"];
