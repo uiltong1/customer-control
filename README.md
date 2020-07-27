@@ -1,6 +1,7 @@
 # Customer Control
 Projeto que tem o intuito de realizar o controle de clientes de uma empresa, contando com todas as ações necessárias para um ótimo gerenciamento.
-
+# Resumo da Arquitetura
+![Arquitetura do sistema](https://github.com/uiltong1/customer-control/blob/master/Arquitetura.png?raw=true)
 # Clone
 ```shell
 git clone https://github.com/uiltong1/customer-control.git
