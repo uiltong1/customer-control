@@ -30,7 +30,7 @@ function updateCustomer($cliente){
   $cliente->update($customer);
   $log->systemLog($customer, 'Dados do Cliente foi alterado');
   echo" <script>alert('Dados atualizados com sucesso!')
-                history.go(-1);</script>";
+                history.go(-2);</script>";
 }
 
 function insertCustomer($cliente){
